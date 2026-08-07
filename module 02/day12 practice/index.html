@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habesha Eatery | Authentic Ethiopian Cuisine & Reservation</title>
+    <meta
+      name="description"
+      content="Experiance authentic ethiopian flavors at habesha eatery. book your table online and explore our traditional  menu featuring kitfo, dorowot and injera."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu"> our Menu</a></li>
+          <li><a href="#reservation">book a table</a></li>
+          <li><a href="#location">find us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to Habesha Eatery</h1>
+      <section id="hero">
+        <h2>Experience Traditional dining</h2>
+        <img
+          src="mesob.jpg"
+          alt="A traditional Ethiopian mesob table served with colorfull varieties of wot stew on injera flatbread"
+          loading="lazy"
+          width="1200"
+          height="600"
+        />
+      </section>
+      <section id="menu">
+        <h2>Traditional Menu</h2>
+        <table>
+          <caption>
+            Freshly Prepared traditional ethiopian dishes and prices
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Dish name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price (ETB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">special dorowot</th>
+              <td>
+                Traditional spicy chicken stew served with hard-boiled eggs and
+                injera
+              </td>
+              <td>450.00 ETB</td>
+            </tr>
+            <tr>
+              <th scope="row">beyaynetu</th>
+              <td>
+                A color platter of various vegan stews and lentils on injera.
+              </td>
+              <td>350.00 ETB</td>
+            </tr>
+            <tr>
+              <th scope="row">kitfo</th>
+              <td>
+                Finely minced lean beef, seasoned with mitmita and niter kibbeh.
+              </td>
+              <td>500.00 ETB</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="Reserve">
+        <h2>Table reservation</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (Format: 09XXXXXXXX):</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="09[0-9]{8}"
+              placeholder="0911121314"
+              required
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests (1-20):</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              max="20"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <button type="submit">Confirm Reservation</button>
+        </form>
+      </section>
+      <section id="location">
+        <h2>our location</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63054.733273219026!2d38.79084482807925!3d8.979432716326848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b33a3569139%3A0xb505349b8c87fdd2!2sBole%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1786118068122!5m2!1sen!2set"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="google map showing the location of habesha eatery in Addis Ababa"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Habesha Eatery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
