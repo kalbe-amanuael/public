@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ================================================================= -->
+    <!-- EXERCISE 5: DOCUMENT HEAD STRUCTURE & SEO METADATA                -->
+    <!-- ================================================================= -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habesha Eatery - Authentic Ethiopian Dining & Portal</title>
+    <meta
+      name="description"
+      content="Reserve a table at Habesha Eatery in Bole, view domestic flight schedules, and register for regional services."
+    />
+  </head>
+  <body>
+    <!-- ================================================================= -->
+    <!-- SHARED SITE HEADER & NAVIGATION LANDMARKS                         -->
+    <!-- ================================================================= -->
+    <header>
+      <h1>Habesha Eatery & Development Portal</h1>
+      <nav>
+        <ul>
+          <!-- aria-current="page" helps screen readers identify the active link -->
+          <li>
+            <a href="#mini-project-section" aria-current="page"
+              >Restaurant Mini-Project</a
+            >
+          </li>
+          <li><a href="#exercises-section">Practice Exercises Block</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================================================================= -->
+      <!-- PART A: HABESHA EATERY MINI-PROJECT COMPONENT                     -->
+      <!-- ================================================================= -->
+      <article id="mini-project-section">
+        <h2>1. Restaurant Hub (Mini-Project Page 1 Component)</h2>
+
+        <!-- Section 1: Reservation Form -->
+        <section aria-labelledby="reservation-heading">
+          <h3 id="reservation-heading">Book a Table</h3>
+          <!-- Method: POST is used here because making a reservation changes data on the server -->
+          <form action="/reserve" method="post">
+            <fieldset>
+              <legend>Reservation Details</legend>
+
+              <div>
+                <label for="phone-res">Phone Number (TeleBirr)</label>
+                <input
+                  id="phone-res"
+                  name="phone_res"
+                  type="tel"
+                  pattern="\+251[0-9]{9}"
+                  placeholder="+251911234567"
+                  required
+                  aria-describedby="phone-hint"
+                />
+                <p id="phone-hint">Format: +251 followed by 9 digits.</p>
+              </div>
+
+              <div>
+                <label for="size-res">Party Size</label>
+                <input
+                  id="size-res"
+                  name="party_size"
+                  type="number"
+                  min="1"
+                  max="12"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="date-res">Reservation Date</label>
+                <input id="date-res" name="res_date" type="date" required />
+              </div>
+
+              <button type="submit">Submit Reservation</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <!-- Section 2: Menu Table -->
+        <section aria-labelledby="menu-heading">
+          <h3 id="menu-heading">Our Traditional Menu</h3>
+          <table>
+            <caption>
+              Habesha Eatery main menu
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Dish</th>
+                <th scope="col">Price (ETB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Doro Wat</th>
+                <td>320</td>
+              </tr>
+              <tr>
+                <th scope="row">Shiro</th>
+                <td>180</td>
+              </tr>
+              <tr>
+                <th scope="row">Tibs</th>
+                <td>360</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 3: Contact Form & Hours (Mini-Project Page 2 Component) -->
+        <section aria-labelledby="contact-heading">
+          <h3 id="contact-heading">Contact Us & Restaurant Hours</h3>
+
+          <!-- Contact Form -->
+          <form action="/contact" method="post">
+            <fieldset>
+              <legend>Send Us a Message</legend>
+              <div>
+                <label for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="contact_name"
+                  type="text"
+                  required
+                />
+              </div>
+              <div>
+                <label for="contact-email">Email Address</label>
+                <input
+                  id="contact-email"
+                  name="contact_email"
+                  type="email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="contact-msg">Message</label>
+                <textarea
+                  id="contact-msg"
+                  name="contact_message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </fieldset>
+          </form>
+
+          <!-- Opening Hours Table -->
+          <table>
+            <caption>
+              Weekly Operating and Business Hours
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Monday - Friday</th>
+                <td>11:00 AM - 10:00 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>10:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>12:00 PM - 09:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+
+      <hr />
+
+      <!-- ================================================================= -->
+      <!-- PART B: STANDALONE PRACTICE EXERCISES                             -->
+      <!-- ================================================================= -->
+      <article id="exercises-section">
+        <h2>2. Standalone Practice Exercises</h2>
+
+        <!-- Exercise 1: Ethio Telecom Registration Form -->
+        <section>
+          <h3>Exercise 1: Ethio Telecom Registration</h3>
+          <!-- 
+          Chosen Method: POST. 
+          Justification: Registration involves personal identifiable information (PII) 
+          such as names and phone numbers, which must be hidden from the URL query string for privacy. 
+        -->
+          <form action="/telecom-register" method="post">
+            <fieldset>
+              <legend>Telecom Service Signup</legend>
+
+              <div>
+                <label for="tel-name">Full Name</label>
+                <input id="tel-name" name="tel_fullname" type="text" required />
+              </div>
+
+              <div>
+                <label for="tel-email">Email Address</label>
+                <input id="tel-email" name="tel_email" type="email" required />
+              </div>
+
+              <div>
+                <label for="tel-number">Phone Number</label>
+                <input
+                  id="tel-number"
+                  name="tel_phone"
+                  type="tel"
+                  pattern="\+251[0-9]{9}"
+                  required
+                  aria-describedby="telecom-hint"
+                />
+                <p id="telecom-hint">Format: +251 followed by 9 digits.</p>
+              </div>
+
+              <div>
+                <label for="tel-branch">Select Nearest Branch</label>
+                <select id="tel-branch" name="tel_branch" required>
+                  <option value="">-- Choose a branch --</option>
+                  <option value="bole">Bole</option>
+                  <option value="kazanchis">Kazanchis</option>
+                  <option value="piassa">Piassa</option>
+                </select>
+              </div>
+
+              <button type="submit">Complete Registration</button>
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <h3>Exercise 2: Ethiopian Airlines Schedule</h3>
+          <table>
+            <caption>
+              Ethiopian Airlines Domestic Flight Schedule
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Flight</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Departs</th>
+                <th scope="col">Price (ETB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">ET-101</th>
+                <td>Addis Ababa</td>
+                <td>Bahar Dar</td>
+                <td>08:00 AM</td>
+                <td>3,500</td>
+              </tr>
+              <tr>
+                <th scope="row">ET-202</th>
+                <td>Addis Ababa</td>
+                <td>Dire Dawa</td>
+                <td>10:30 AM</td>
+                <td>4,200</td>
+              </tr>
+              <tr>
+                <th scope="row">ET-303</th>
+                <td>Addis Ababa</td>
+                <td>Mekele</td>
+                <td>01:15 PM</td>
+                <td>3,900</td>
+              </tr>
+              <tr>
+                <th scope="row">ET-404</th>
+                <td>Addis Ababa</td>
+                <td>Gondar</td>
+                <td>03:45 PM</td>
+                <td>3,600</td>
+              </tr>
+              <tr>
+                <th scope="row">ET-505</th>
+                <td>Addis Ababa</td>
+                <td>Hawassa</td>
+                <td>06:00 PM</td>
+                <td>3,100</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h3>Exercise 3: Rich Media Integration</h3>
+          <figure>
+            <img
+              src="image.jpg"
+              alt="A freshly prepared plate of spicy doro wat chicken stew served on soft injera bread"
+              width="640"
+              height="420"
+              loading="lazy"
+            />
+            <figcaption>
+              Traditional Doro Wat served hot at Habesha Eatery.
+            </figcaption>
+          </figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45163.4035938363!2d38.76160973010401!3d9.008071287489287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b858fbf50bd97%3A0x93a0799b20ab0276!2sBole%20Addis%20Ababa%20International%20Airport!5e0!3m2!1sen!2set!4v1786181926707!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></>"
+            title="Interactive map showing the exact location of Habesha Eatery in Bole, Addis Ababa"
+            width="100%"
+            height="320"
+            loading="lazy"
+            sandbox
+          ></iframe>
+        </section>
+
+        <section>
+          <h3>Exercise 4: Accessibility Fixes Demo</h3>
+
+          <!-- Fix 1: Native button used instead of an inaccessible div -->
+          <!-- Fix Note: Native buttons inherently provide keyboard focus tracking (via Tab key) and native action triggering via 'Space' or 'Enter' keys out-of-the-box. -->
+          <button type="button">Accessible Action Button</button>
+
+          <!-- Fix 2: Input explicitly bound to an HTML label instead of relying on placeholders -->
+          <!-- Fix Note: Programmatic labels ensure screen readers announce what input data is expected when focused, and it also expands the physical clickable target boundaries. -->
+          <div>
+            <label for="search-box">Search Database</label>
+            <input
+              id="search-box"
+              name="query"
+              type="text"
+              placeholder="e.g. Flight numbers..."
+            />
+          </div>
+
+          <!-- Fix 3: Image element with a descriptive alternate text attribute -->
+          <!-- Fix Note: A meaningful alt attribute allows screen readers to explain the image context to visually impaired users instead of reading out the cryptic image file name. -->
+          <img
+            src="logo.jpg"
+            alt="Habesha Eatery Official Brand Identity Logo"
+            width="220"
+            height="75"
+          />
+        </section>
+      </article>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- SHARED SITE FOOTER LANDMARK                                       -->
+    <!-- ================================================================= -->
+    <footer>
+      <p>
+        Location: Bole District, Addis Ababa, Ethiopia | Contact: +251 911 234
+        567
+      </p>
+      <p>&copy; 2026 Habesha Eatery. Built for accessibility compliance.</p>
+    </footer>
+  </body>
+</html>

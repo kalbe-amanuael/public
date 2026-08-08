@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethio Telecom Registration & Domestic Schedules</title>
+    <meta
+      name="description"
+      content="Register for Ethio Telecom services online and view domestic Ethiopian Airlines flight schedules."
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Ethio Telecom Portal & Flights</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Service Registration</h2>
+        <form action="/register" method="post">
+          <fieldset>
+            <legend>Register for Fictional Service</legend>
+
+            <div>
+              <label for="username">Full Name</label>
+              <input id="username" name="username" type="text" required />
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div>
+              <label for="tel">Phone Number</label>
+              <input
+                id="tel"
+                name="tel"
+                type="tel"
+                pattern="\+251[0-9]{9}"
+                required
+                aria-describedby="tel-hint"
+              />
+              <p id="tel-hint">Format: +251 followed by 9 digits.</p>
+            </div>
+
+            <div>
+              <label for="branch">Select Branch</label>
+              <select id="branch" name="branch" required>
+                <option value="">-- Choose a branch --</option>
+                <option value="bole">Bole</option>
+                <option value="kazanchis">Kazanchis</option>
+                <option value="piassa">Piassa</option>
+              </select>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h2>Flight Schedule</h2>
+        <table>
+          <caption>
+            Ethiopian Airlines Domestic Flight Schedule
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Flight</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Departs</th>
+              <th scope="col">Price (ETB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ET-101</th>
+              <td>Addis Ababa</td>
+              <td>Bahar Dar</td>
+              <td>08:00 AM</td>
+              <td>3,500</td>
+            </tr>
+            <tr>
+              <th scope="row">ET-202</th>
+              <td>Addis Ababa</td>
+              <td>Dire Dawa</td>
+              <td>10:30 AM</td>
+              <td>4,200</td>
+            </tr>
+            <tr>
+              <th scope="row">ET-303</th>
+              <td>Addis Ababa</td>
+              <td>Mekele</td>
+              <td>01:15 PM</td>
+              <td>3,900</td>
+            </tr>
+            <tr>
+              <th scope="row">ET-404</th>
+              <td>Addis Ababa</td>
+              <td>Gondar</td>
+              <td>03:45 PM</td>
+              <td>3,600</td>
+            </tr>
+            <tr>
+              <th scope="row">ET-505</th>
+              <td>Addis Ababa</td>
+              <td>Hawassa</td>
+              <td>06:00 PM</td>
+              <td>3,100</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Featured Media & Location</h2>
+        <figure>
+          <img
+            src="image.jpg"
+            alt="A plate of spicy traditional doro wat served on top of spongy injera bread"
+            width="640"
+            height="420"
+            loading="lazy"
+          />
+          <figcaption>
+            Traditional Doro Wat served at Habesha Eatery.
+          </figcaption>
+        </figure>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15761.156686426008!2d38.744371098116154!3d9.037364556387342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8575e8e2decd%3A0x553ea40ff446dd6!2sPiyasa!5e0!3m2!1sen!2set!4v1786179966699!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></=>"
+          title="Map showing Habesha Eatery in Bole, Addis Ababa"
+          width="100%"
+          height="320"
+          loading="lazy"
+          sandbox
+        ></iframe>
+      </section>
+      <section>
+        <h2>Accessibility Demonstration</h2>
+        <button type="submit">Submit</button>
+        <div>
+          <label for="search">Search Site</label>
+          <input
+            id="search"
+            name="search"
+            type="text"
+            placeholder="Enter search term"
+          />
+        </div>
+        <img
+          src="logo.png"
+          alt="Official Corporate Logo"
+          width="200"
+          height="80"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Portal Exercises. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
