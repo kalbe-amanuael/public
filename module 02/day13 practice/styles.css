@@ -1,0 +1,101 @@
+/* 1. Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Base font and line-height */
+:root {
+  --primary-gold: #b38f00; /* White background for cards */
+  --card-border: #cccccc;
+  --bg-zebra: #f9f9f9;
+  --text-main: #333333;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-header h1 {
+  color: var(--text-main);
+  border-bottom: 3px solid var(--primary-gold);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  border-top: 6px solid var(--primary-gold);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card h2 {
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary-gold);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.price::before {
+  content: "ETB ";
+}
+
+.menu-card p {
+  color: #555555;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  min-height: 75px;
+}
+
+.ingredients {
+  list-style: none;
+  border-top: 1px solid var(--card-border);
+  padding-top: 8px;
+  margin-top: auto0;
+}
+
+.ingredients li {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
+
+.ingredients li:nth-child(even) {
+  background-color: var(--bg-zebra);
+}
