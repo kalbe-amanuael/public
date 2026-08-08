@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Profile Card - Bole Café</title>
+
+    <!-- Standard Web Font (Poppins) -->
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ==========================================================================
+       1. Global reset and Box-sizing (box-sizing: border-box set globally)
+       ========================================================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ==========================================================================
+       2. :root palette and spacing scale (CSS variables used via var())
+       ========================================================================== */
+      :root {
+        /* Color Palette */
+        --bg-gradient: linear-gradient(135deg, #f5efe6, #e8d8c8);
+        --card-bg: #ffffff;
+        --primary-color: hsl(25, 75%, 35%); /* Coffee brown color */
+        --text-dark: #2c1e11;
+        --text-muted: #6b5947;
+
+        /* Spacing Scale */
+        --space-sm: 12px;
+        --space-md: 24px;
+        --space-lg: 32px;
+
+        /* Border Radius */
+        --radius-md: 16px;
+      }
+
+      /* ==========================================================================
+       3. Body and readable font (Web font from Google Fonts)
+       ========================================================================== */
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-gradient);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-md);
+      }
+
+      /* ==========================================================================
+       4. Centered card built with Box Model (padding, border, border-radius)
+       ========================================================================== */
+      .profile-card {
+        background-color: var(--card-bg);
+        width: 100%;
+        max-width: 400px;
+        padding: var(--space-lg); /* Box Model: Padding */
+        border: 1px solid rgba(0, 0, 0, 0.08); /* Box Model: Border */
+        border-radius: var(--radius-md); /* Box Model: Border-radius */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        position: relative; /* For pseudo-element positioning */
+      }
+
+      /* ==========================================================================
+       5. Clear typographic hierarchy & generous line-height
+       ========================================================================== */
+      .business-name {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: var(--space-sm);
+      }
+
+      .tagline {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: var(--space-md);
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--text-dark);
+        line-height: 1.8; /* Generous line-height */
+        margin-bottom: var(--space-lg);
+      }
+
+      /* ==========================================================================
+       6. Pseudo-element (Decorative ::before accent line)
+       ========================================================================== */
+      .profile-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: var(--primary-color);
+        border-top-left-radius: var(--radius-md);
+        border-top-right-radius: var(--radius-md);
+      }
+
+      .Contact-btn {
+        background-color: hsl(25, 75%, 35%) !important; /* Initial base color */
+        color: #ffffff !important;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-btn:hover {
+        background-color: hsl(25, 75%, 45%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main profile card container centered on screen -->
+    <div class="profile-card">
+      <!-- Business Name Heading -->
+      <h1 class="business-name">Bole Café</h1>
+
+      <!-- Tagline -->
+      <p class="tagline">Premium Ethiopian Coffee & Fresh Pastries</p>
+
+      <!-- Body Text -->
+      <p class="description">
+        Experience the rich heritage of Ethiopian coffee right in the heart of
+        Bole. We roast our beans daily to guarantee a perfect traditional flavor
+        with a modern touch. Visit us today for a cozy atmosphere and friendly
+        service.
+      </p>
+
+      <!-- Contact Button -->
+      <button class="contact-btn">Contact Us</button>
+    </div>
+  </body>
+</html>

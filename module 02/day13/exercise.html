@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 13 Exercises</title>
+    <style>
+      /* ==========================================
+       EXERCISE 1: :root Properties 
+       ========================================== */
+      :root {
+        --primary-color: #007bff;
+        --text-color: #ffffff;
+        --button-padding: 12px 24px;
+        --font-family: "Helvetica Neue", Arial, sans-serif;
+
+        /* EXERCISE 5: 3-Color Palette (Base Colors) */
+        --color-1: hsl(211, 100%, 50%); /* Blue */
+        --color-2: hsl(354, 70%, 54%); /* Red */
+        --color-3: hsl(134, 61%, 41%); /* Green */
+      }
+
+      body {
+        font-family: var(--font-family);
+        padding: 30px;
+        background-color: #f4f6f9;
+      }
+
+      section {
+        background: white;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+      }
+
+      /* EXERCISE 1: Styled Button using var() */
+      .custom-btn {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: var(--button-padding);
+        font-family: var(--font-family);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* ==========================================
+       EXERCISE 2: Box Model (Fix with border-box)
+       ========================================== */
+      .card {
+        box-sizing: border-box;
+        width: 300px;
+        padding: 24px;
+        border: 2px solid #333;
+        background-color: #fff;
+      }
+
+      /* ==========================================
+       EXERCISE 3: CSS Specificity Demonstration
+       ========================================== */
+      #text-id {
+        color: blue;
+      } /* Specificity Score: 1, 0, 0 */
+      .text-class {
+        color: red;
+      } /* Specificity Score: 0, 1, 0 */
+      p {
+        color: green;
+      } /* Specificity Score: 0, 0, 1 */
+
+      /* ==========================================
+       EXERCISE 4: Ethiopian Airlines Schedule Table
+       ========================================== */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+
+      th {
+        background-color: #006643; /* Ethiopian Airlines Green */
+        color: #f1b82d; /* Yellow Gold */
+        padding: 14px;
+        text-align: left;
+      }
+
+      td {
+        padding: 12px 14px; /* Comfortable cell padding */
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Zebra rows configuration */
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* ==========================================
+       EXERCISE 5: Palette Conversion & Lighter Hover
+       ========================================== */
+      .palette-container {
+        display: flex;
+        gap: 15px;
+      }
+
+      .color-box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Base colors */
+      .box-1 {
+        background-color: var(--color-1);
+      }
+      .box-2 {
+        background-color: var(--color-2);
+      }
+      .box-3 {
+        background-color: var(--color-3);
+      }
+
+      /* Hover effect: Increased lightness for lighter shade */
+      .box-1:hover {
+        background-color: hsl(211, 100%, 65%);
+      }
+      .box-2:hover {
+        background-color: hsl(354, 70%, 69%);
+      }
+      .box-3:hover {
+        background-color: hsl(134, 61%, 56%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- EXERCISE 1 -->
+    <section>
+      <h2>Exercise 1: Custom Properties & Styled Button</h2>
+      <button class="custom-btn">Styled Button</button>
+    </section>
+
+    <!-- EXERCISE 2 -->
+    <section>
+      <h2>Exercise 2: Box Model Card (Exactly 300px Wide)</h2>
+      <div class="card">
+        This card is exactly 300px wide because it uses box-sizing: border-box.
+      </div>
+      <p><em>*Note: With content-box, the width would have border</em></p>
+    </section>
+    <!-- EXERCISE 3 -->
+    <section>
+      <h2>Exercise 3: CSS Specificity</h2>
+      <p id="text-id" class="text-class">
+        This text is targeted by Element, Class, and ID rules. The ID rule wins!
+      </p>
+      <p>
+        <strong>Scores:</strong> ID (1,0,0) | Class (0,1,0) | Element (0,0,1)
+      </p>
+    </section>
+
+    <!-- EXERCISE 4 -->
+    <section>
+      <h2>Exercise 4: Ethiopian Airlines Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Flight No</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ET 501</td>
+            <td>Addis Ababa</td>
+            <td>Washington DC</td>
+            <td>10:15 PM</td>
+          </tr>
+          <tr>
+            <td>ET 702</td>
+            <td>Addis Ababa</td>
+            <td>London Heathrow</td>
+            <td>01:00 AM</td>
+          </tr>
+          <tr>
+            <td>ET 304</td>
+            <td>Addis Ababa</td>
+            <td>Nairobi</td>
+            <td>08:45 AM</td>
+          </tr>
+          <tr>
+            <td>ET 601</td>
+            <td>Addis Ababa</td>
+            <td>Dubai</td>
+            <td>11:30 AM</td>
+          </tr>
+          <tr>
+            <td>ET 812</td>
+            <td>Addis Ababa</td>
+            <td>Johannesburg</td>
+            <td>09:15 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EXERCISE 5 -->
+    <section>
+      <h2>Exercise 5: Three-Color Palette</h2>
+      <p>
+        Hex to HSL palette conversion. Hover over each box to see a lighter
+        version:
+      </p>
+      <div class="palette-container">
+        <div class="color-box box-1">Blue</div>
+        <div class="color-box box-2">Red</div>
+        <div class="color-box box-3">Green</div>
+      </div>
+      <p>
+        <strong>Hex values used:</strong> Blue (#007bff -> rgb(0,123,255)), Red
+        (#dc3545 -> rgb(220,53,69)), Green (#28a745 -> rgb(40,167,69))
+      </p>
+    </section>
+  </body>
+</html>
