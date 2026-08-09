@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habesha Eatery | Authentic Ethiopian Cuisine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 1. STICKY NAVBAR -->
+    <header class="main-header">
+      <nav class="navbar">
+        <a href="#" class="logo">Habesha Eatery</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reserve">Reservations</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 2. HERO SECTION -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Experience Authentic Flavors</h1>
+          <p>
+            Traditional Ethiopian dishes made with love and fresh ingredients.
+          </p>
+          <a href="#reserve" class="btn-cta">Book a Table</a>
+        </div>
+      </section>
+
+      <!-- 3. ABOUT / STORY SECTION -->
+      <section id="about" class="about">
+        <h2>Our Story</h2>
+        <p>
+          Bringing the rich culinary heritage of Addis Ababa straight to your
+          plate. Enjoy our carefully crafted dishes with friends and family in a
+          warm, welcoming atmosphere.
+        </p>
+      </section>
+
+      <!-- 4. MENU GRID (Auto-fit 1 -> 2 -> 3 Columns) -->
+      <section id="menu" class="menu">
+        <h2>Our Featured Menu</h2>
+        <div class="menu-grid">
+          <!-- Card 1 -->
+          <article class="menu-card">
+            <img
+              src="dorowot.jpg"
+              alt="Doro Wat served with Injera"
+              class="menu-img"
+            />
+            <div class="menu-info">
+              <h3>Doro Wat</h3>
+              <p>
+                Spicy chicken stew simmered in berbere sauce, served with boiled
+                egg and injera.
+              </p>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="menu-card">
+            <img
+              src="specialveggiecombo.jpg"
+              alt="Veggie Combo platter"
+              class="menu-img"
+            />
+            <div class="menu-info">
+              <h3>Beyaynetu</h3>
+              <p>
+                A colorful variety of vegetarian stews including lentils,
+                chickpeas, and greens.
+              </p>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="menu-card">
+            <img
+              src="special kitfo.jpg"
+              alt="Sizzling Kitfo"
+              class="menu-img"
+            />
+            <div class="menu-info">
+              <h3>Kitfo</h3>
+              <p>
+                Minced lean beef seasoned with mitmita and niter kibbeh, served
+                raw or rare.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. RESERVATION FORM -->
+      <section id="reserve" class="reservation">
+        <h2>Book a Table</h2>
+        <form class="reserve-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required placeholder="0911-XX-XX-XX" />
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required />
+          </div>
+          <button type="submit" class="btn-submit">Submit Reservation</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- 6. FOOTER -->
+    <footer class="main-footer">
+      <div class="footer-info">
+        <p><strong>Address:</strong> Bole Road, Addis Ababa, Ethiopia</p>
+        <p><strong>Phone:</strong> +251 11 6XX XXXX</p>
+        <p><strong>Hours:</strong> Mon - Sun: 11:00 AM - 10:00 PM</p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2024 Habesha Eatery. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
