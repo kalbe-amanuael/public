@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Step 1: Make page a Grid with rows: auto / 1fr / auto */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Step 2: Build the navbar with Flexbox: logo left, links right, sticky to top */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #8b0000; /* Dark Red / Burgundy Theme */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* Step 3: Lay out the menu out with repeat(auto-fit, minmax(220px, 1fr)) */
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 30px;
+  align-content: start;
+}
+
+/* Step 4: Make each card a Flexbox column with the price pinned to the bottom */
+.menu-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes the inner elements apart */
+}
+
+/* Content block inside card to keep text clustered together */
+.card-content h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Step 4: Price design element pinned by space-between layout */
+.price {
+  font-weight: bold;
+  color: #8b0000;
+  font-size: 16px;
+  margin-top: auto; /* Extra reinforcement for pinning to the bottom */
+}
+
+/* Step 5: Pin a "Popular" badge to a card corner with relative + absolute */
+.relative-card {
+  position: relative;
+}
+
+.badge-popular {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffd700; /* Gold/Yellow color */
+  color: #000;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}

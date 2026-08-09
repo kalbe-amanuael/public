@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* ----------------------------------------------------
+   Step 2: Mobile-First Base Style (Single column for mobile)
+   ---------------------------------------------------- */
+.menu-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+  /* Step 4: Setup the baseline transition properties */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ----------------------------------------------------
+   Step 3: Media Queries for Multicolumn Layouts
+   ---------------------------------------------------- */
+
+/* Tablet Screen Size: 2 columns */
+@media (min-width: 768px) {
+  .menu-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+/* Desktop Screen Size: 3 columns */
+@media (min-width: 1024px) {
+  .menu-section {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+  }
+}
+
+/* ----------------------------------------------------
+   Step 4 & 5: Hover Animation with Reduced-Motion Guard
+   ---------------------------------------------------- */
+
+/* The animation triggers only if the user hasn't enabled reduced motion settings */
+@media (prefers-reduced-motion: no-preference) {
+  .menu-card:hover {
+    /* Lift card up and slightly scale it up */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+}

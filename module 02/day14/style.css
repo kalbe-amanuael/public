@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* 1. Grid Layout Skeleton with grid-template-areas */
+.page-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+}
+
+/* Assigning Areas */
+.main-header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main-content {
+  grid-area: main;
+}
+.main-footer {
+  grid-area: footer;
+}
+
+/* Styling Sections */
+/* 4. Sticky Header Element */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #006633; /* Ethiopian Airlines/CBE Inspired Green */
+  color: white;
+  padding: 15px 20px;
+  /* 2. Flexbox for Inner Components */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.main-content {
+  padding: 25px;
+  background-color: #fafafa;
+}
+
+/* 3. Responsive Card Grid using auto-fit and minmax */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* 5. Absolutely Positioned Element & Relative Parent */
+.relative-parent {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00; /* Yellow Accent */
+  color: black;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.main-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* 6. Single Media Query for Mobile One-Column Layout */
+@media (max-width: 768px) {
+  .page-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+}

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.exercise-section {
+  margin: 40px 20px;
+  padding: 20px;
+  border: 2px dashed #999;
+  background-color: #fafafa;
+}
+.exercise-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* --------------------------------------
+   Exercise 1: Flexbox Navbar
+-------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.nav-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* --------------------------------------
+   Exercise 2: Responsive Flexbox Cards
+-------------------------------------- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------------
+   Exercise 3: Grid Photo Gallery
+-------------------------------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.photo {
+  background-color: #ddd;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbb;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 3fr;
+  gap: 1rem;
+}
+
+.header {
+  grid-area: header;
+  background: #bbb;
+  padding: 20px;
+  text-align: center;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: #ddd;
+  padding: 20px;
+}
+.main {
+  grid-area: main;
+  background: #eee;
+  padding: 40px;
+}
+.footer {
+  grid-area: footer;
+  background: #bbb;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .page-layout {
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------
+   Exercise 5: Relative + Absolute Badge
+-------------------------------------- */
+.product-card {
+  position: relative;
+  width: 250px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: white;
+  margin: 0 auto; /* መሃል ላይ እንዲሆን */
+}
+.product-img {
+  background-color: #eee;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #888;
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e74c3c;
+  color: white;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

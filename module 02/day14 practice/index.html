@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habesha Eatery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Step 1 & 2: Main Grid Skeleton and Sticky Flexbox Navbar -->
+    <nav class="navbar">
+      <div class="logo">Habesha Eatery</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+
+    <!-- Step 3: Menu Section Grid using repeat(auto-fit, minmax(220px, 1fr)) -->
+    <main class="menu-section">
+      <!-- Card 1: With "Popular" Badge pinned to a corner -->
+      <!-- Step 4: Card is a flex column -->
+      <div class="menu-card relative-card">
+        <!-- Step 5: Absolute Badge -->
+        <span class="badge-popular">Popular</span>
+        <div class="card-content">
+          <h3>Special Kitfo</h3>
+          <p>
+            Finely chopped lean beef, seasoned with mitmita and niter kibbeh.
+          </p>
+        </div>
+        <!-- Step 4: Price pinned to bottom -->
+        <span class="price">450 ETB</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="menu-card">
+        <div class="card-content">
+          <h3>Beyaynetu</h3>
+          <p>A colorful platter of various vegan stews served atop injera.</p>
+        </div>
+        <span class="price">350 ETB</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="menu-card">
+        <div class="card-content">
+          <h3>Doro Wat</h3>
+          <p>
+            Slow-cooked chicken stew with hard-boiled eggs and berbere spices.
+          </p>
+        </div>
+        <span class="price">500 ETB</span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Habesha Eatery. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
