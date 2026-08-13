@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Market Shopping List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Addis Market Shopping List</h1>
+
+    <!-- Live count of remaining items -->
+    <p id="counter">Items remaining: 0</p>
+
+    <!-- Grocery item addition form -->
+    <form id="shopping-form">
+      <input
+        type="text"
+        id="item-input"
+        placeholder="Enter grocery item"
+        required
+      />
+      <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Target list container -->
+    <ul id="list"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
